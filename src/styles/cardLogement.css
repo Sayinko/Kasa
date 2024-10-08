@@ -1,0 +1,25 @@
+.card {
+  margin: 50px 0px;
+}
+.card__container {
+  height: 415px;
+  position: relative;
+}
+.card__container--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.card__container--arrowLeft {
+  position: absolute;
+  top: 44%;
+  left: 20px;
+}
+.card__container--arrowRight {
+  position: absolute;
+  top: 44%;
+  right: 20px;
+}
+
+/*# sourceMappingURL=cardLogement.css.map */
