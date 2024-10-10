@@ -1,0 +1,89 @@
+$background-color: #F6F6F6;
+$main-color: #FF6060;
+
+li {
+    list-style: none;
+}
+
+.containerDetails  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__descriptTopbar {
+        width: 45%;
+    }
+
+    &__topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $main-color;
+        border-radius: 10px;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 0 20px;
+
+        p {
+            color: white;
+        }
+    }
+}
+
+.toggleDescription {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.toggleEquipment {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.toggleDescription.visible {
+    max-height: 200px;
+    opacity: 1;  
+    background-color: $background-color;
+    position: relative;
+    bottom: 8px;
+    z-index: -1;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    p {
+        padding: 21px;
+        font-size: 18px;
+        font-weight: 400;
+        }
+    }
+
+.toggleEquipment.visible {
+    max-height: 200px;
+    opacity: 1;  
+    padding: 16px 21px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: $background-color;
+    position: relative;
+    bottom: 8px;
+    z-index: -1;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    ul {
+        padding: 0;
+    }
+}
+
+    
+.toggleDescription.hidden, .toggleEquipment.hidden {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+
+}

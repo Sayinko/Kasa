@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from "./components/pages/App";
-import About from "./components/pages/About";
-import Location from "./components/pages/Location";
+import App from "./components/pages/App.jsx";
+import About from "./components/pages/About.jsx";
+import Location from "./components/pages/Location.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
