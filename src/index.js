@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./components/pages/App.jsx";
 import About from "./components/pages/About.jsx";
 import Location from "./components/pages/Location.jsx";
+import ErrorPages from "./components/pages/ErrorPages.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -11,7 +12,8 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/about" element={<About />} />
-      <Route path="/location/:id" element={<Location />} />
+      <Route path="/location/:id?" element={<Location />} />
+      <Route path="*" element={<ErrorPages />} />
     </Routes>
   </Router>
 );

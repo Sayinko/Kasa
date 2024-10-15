@@ -5,14 +5,8 @@ li {
     list-style: none;
 }
 
-.containerDetails  {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    &__descriptTopbar {
+.containerCollapse {
         width: 45%;
-    }
 
     &__topbar {
         display: flex;
@@ -25,28 +19,40 @@ li {
         font-size: 18px;
         padding: 0 20px;
 
+        button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            outline: none;
+                }
+
         p {
             color: white;
         }
     }
 }
 
+.rotate {
+    transform: rotate(-180deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+
 .toggleDescription {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
 
-.toggleEquipment {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    p {
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    }
 }
 
 .toggleDescription.visible {
-    max-height: 200px;
     opacity: 1;  
     background-color: $background-color;
     position: relative;
@@ -56,9 +62,18 @@ li {
     border-bottom-left-radius: 15px;
 
     p {
-        padding: 21px;
+        padding: 0;
+        margin: 0;
         font-size: 18px;
         font-weight: 400;
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        ul {
+            padding: 16px 21px;
+            font-size: 18px;
         }
     }
 
@@ -74,6 +89,7 @@ li {
     z-index: -1;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
     ul {
         padding: 0;
@@ -81,9 +97,23 @@ li {
 }
 
     
-.toggleDescription.hidden, .toggleEquipment.hidden {
-    max-height: 0;
+.toggleDescription.hidden {
     opacity: 0;
     visibility: hidden;
 
+}
+
+.toggleDescription.aboutContent.visible {
+    padding: 26px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.toggleDescription.styleAbout.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.containerCollapse.styleAbout {
+        width: 70%;
 }

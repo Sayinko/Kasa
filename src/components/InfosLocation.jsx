@@ -1,5 +1,6 @@
 import "../styles/infosLocation.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from "prop-types";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 function InfosLocation({title, location, nameHost, pictureHost, tags, rating}) {
@@ -7,11 +8,11 @@ function InfosLocation({title, location, nameHost, pictureHost, tags, rating}) {
     const stars = []
 
     for(let i = 0; i < ratingNumber; i++) {
-        stars.push(<FontAwesomeIcon icon={faStar} className="star"/>)
+        stars.push(<FontAwesomeIcon key={`star-${i}`} icon={faStar} className="star"/>)
     }
 
     for(let i = ratingNumber; i < 5; i++) {
-        stars.push(<FontAwesomeIcon icon={faStar} className="starGrey"/>)
+        stars.push(<FontAwesomeIcon key={`starGrey-${i}`} icon={faStar} className="starGrey"/>)
     }
 
 
@@ -24,13 +25,13 @@ function InfosLocation({title, location, nameHost, pictureHost, tags, rating}) {
                 </div>
                 <div className="containerLocation__infos--name">
                     <p>{nameHost}</p>
-                    <img src={pictureHost} alt="Photo de l'hôte"/>
+                    <img src={pictureHost} alt="L'hôte"/>
                 </div>
             </div>
             <div className="containerLocation__description">
                 <div className="containerLocation__description--filters">
-                    {tags.map((tag, index) => (
-                        <p key={`tag${index}`}>{tag}</p>
+                    {tags.map((tag) => (
+                        <p key={tag}>{tag}</p>
                     ))}
                 </div>
                 <div className="containerLocation__description--stars">
@@ -39,6 +40,15 @@ function InfosLocation({title, location, nameHost, pictureHost, tags, rating}) {
             </div>
         </div>
     )
+}
+
+InfosLocation.propTypes = {
+    title : PropTypes.string.isRequired,
+    location : PropTypes.string.isRequired,
+    nameHost : PropTypes.string.isRequired,
+    pictureHost : PropTypes.string.isRequired,
+    tags : PropTypes.arrayOf(PropTypes.string).isRequired,
+    rating : PropTypes.string.isRequired
 }
 
 export default InfosLocation;

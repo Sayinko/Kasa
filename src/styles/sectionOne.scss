@@ -3,7 +3,7 @@ $font: 'Montserrat', sans-serif;
 .container {
     display: flex;
     justify-content: center;
-    margin: 50px 0px;
+    margin: 0px 0px 50px 0px;
     font-family: $font;
 
     @media (max-width: 752px) {
@@ -20,23 +20,6 @@ $font: 'Montserrat', sans-serif;
         align-items: center;
         justify-content: center;
 
-    &--img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 30px;
-        border: 1px solid black;
-        filter: brightness(0.50);
-
-        @media (max-width: 752px) {
-            height: 190px;
-            }
-
-        @media (max-width: 547px) {
-            border-radius: 10px;
-            height: 111px;
-        }
-        }
     &--text {
         position: absolute;
         color: white;

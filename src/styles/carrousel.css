@@ -8,6 +8,28 @@
   object-fit: cover;
   border-radius: 25px;
 }
+.card__container--buttonLeft {
+  position: absolute;
+  top: 44%;
+  left: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
+.card__container--buttonRight {
+  position: absolute;
+  top: 44%;
+  right: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
 .card__container--arrowLeft {
   position: absolute;
   top: 44%;

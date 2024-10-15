@@ -3,23 +3,35 @@ import { useParams } from "react-router-dom";
 import Carrousel from "./Carrousel";
 import "../styles/cardLogement.css";
 import InfosLocation from "./InfosLocation";
-import Details from "./Details";
+import Collapse from "./Collapse";
+import ErrorMessage from "./ErrorMessage";
 
 function CardLogement() {
   const { id } = useParams();
+  if (!id) {
+    return <ErrorMessage />
+  }
   const logement = logements.find((logement) => logement.id === id);
-  const host = logement.host;
-  const tags = logement.tags;
+  const host = logement?.host;
+  const tags = logement?.tags;
 
   if (!logement) {
-    return <p>Logement non trouvé.</p>;
+    return <ErrorMessage />;
   }
+
+  const li = logement.equipments.map((equipment, index) => (
+      <li key={equipment+index}>{equipment}</li> ))
+  const equipments = <ul>{li}</ul>
+  const description = <p>{logement.description}</p>
 
   return (
     <div className="card">
       <Carrousel pictures={logement.pictures} title={logement.title}/>
       <InfosLocation title={logement.title} location={logement.location} nameHost={host.name} pictureHost={host.picture} tags={tags} rating={logement.rating}/>
-      <Details equipments={logement.equipments} description={logement.description} />
+      <div className="containerDetails">
+        <Collapse description={description} title="Description" className="card"/>
+        <Collapse description={equipments} title="Équipements" className="card"/>
+      </div>
     </div>
   );
 }

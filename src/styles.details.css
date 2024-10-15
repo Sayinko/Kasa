@@ -2,9 +2,6 @@ li {
   list-style: none;
 }
 
-.containerCollapse {
-  width: 45%;
-}
 .containerCollapse__topbar {
   display: flex;
   justify-content: space-between;
@@ -28,23 +25,15 @@ li {
   color: white;
 }
 
-.rotate {
-  transform: rotate(-180deg);
-  transition: transform 0.5s ease-in-out;
-}
-
 .toggleDescription {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-}
-.toggleDescription p {
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .toggleDescription.visible {
+  max-height: 200px;
   opacity: 1;
   background-color: #F6F6F6;
   position: relative;
@@ -54,16 +43,12 @@ li {
   border-bottom-left-radius: 15px;
 }
 .toggleDescription.visible p {
-  padding: 0;
-  margin: 0;
+  padding: 21px;
   font-size: 18px;
   font-weight: 400;
-  opacity: 1;
-  transform: translateY(0);
-  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
 }
 .toggleDescription.visible ul {
-  padding: 16px 21px;
+  padding: 0 21px;
   font-size: 18px;
 }
 
@@ -79,24 +64,23 @@ li {
   z-index: -1;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 .toggleEquipment.visible ul {
   padding: 0;
 }
 
 .toggleDescription.hidden {
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
 }
 
-.toggleDescription.aboutContent.visible {
+.toggleDescription.styleAbout.visible {
   padding: 26px;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
 }
 
 .toggleDescription.styleAbout.hidden {
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
 }
@@ -105,4 +89,4 @@ li {
   width: 70%;
 }
 
-/*# sourceMappingURL=details.css.map */
+/*# sourceMappingURL=styles.details.css.map */

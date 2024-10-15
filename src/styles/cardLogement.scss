@@ -1,3 +1,9 @@
 .card {
     margin: 50px 0px 0px;
 }
+
+.containerDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
