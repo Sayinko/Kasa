@@ -8,10 +8,10 @@
 }
 @media (max-width: 594px) {
   .img-background {
-    height: 135px;
+    height: 160px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .img-background {
     height: 111px;
     border-radius: 10px;

@@ -28,6 +28,11 @@
   font-weight: 500;
   color: #FF6060;
 }
+@media (max-width: 700px) {
+  .containerLocation__infos--title h1 {
+    font-size: 24px;
+  }
+}
 @media (max-width: 500px) {
   .containerLocation__infos--title h1 {
     font-size: 18px;
@@ -37,6 +42,11 @@
   font-weight: 500;
   font-size: 18px;
   margin: 10px 0;
+}
+@media (max-width: 700px) {
+  .containerLocation__infos--title p {
+    font-size: 16px;
+  }
 }
 @media (max-width: 500px) {
   .containerLocation__infos--title p {
@@ -63,6 +73,11 @@
   gap: 15px;
   height: 50%;
 }
+@media (max-width: 700px) {
+  .containerLocation__description--name {
+    font-size: 14px;
+  }
+}
 @media (max-width: 500px) {
   .containerLocation__description--name {
     font-size: 12px;
@@ -74,6 +89,12 @@
   border-radius: 64px;
   width: 64px;
   height: 64px;
+}
+@media (max-width: 700px) {
+  .containerLocation__description--name img {
+    height: 50px;
+    width: 50px;
+  }
 }
 @media (max-width: 500px) {
   .containerLocation__description--name img {
@@ -96,6 +117,11 @@
   color: #FF6060;
   font-size: 26px;
 }
+@media (max-width: 700px) {
+  .containerLocation__description--stars .star {
+    height: 22px;
+  }
+}
 @media (max-width: 500px) {
   .containerLocation__description--stars .star {
     height: 18px;
@@ -104,6 +130,11 @@
 .containerLocation__description--stars .starGrey {
   color: #E3E3E3;
   font-size: 26px;
+}
+@media (max-width: 700px) {
+  .containerLocation__description--stars .starGrey {
+    height: 22px;
+  }
 }
 @media (max-width: 500px) {
   .containerLocation__description--stars .starGrey {
@@ -126,6 +157,9 @@
 @media (max-width: 700px) {
   .tags p {
     padding: 5px 20px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
   }
 }
 @media (max-width: 500px) {

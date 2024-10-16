@@ -9,16 +9,69 @@
   color: #FF6060;
   font-weight: 700;
 }
+@media (max-width: 1024px) {
+  .containerError__title {
+    font-size: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .containerError__title {
+    font-size: 130px;
+  }
+}
+@media (max-width: 600px) {
+  .containerError__title {
+    font-size: 115px;
+  }
+}
+@media (max-width: 426px) {
+  .containerError__title {
+    font-size: 90px;
+  }
+}
 .containerError__description {
   font-weight: 500;
   font-size: 36px;
   color: #FF6060;
+}
+@media (max-width: 1024px) {
+  .containerError__description {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .containerError__description {
+    font-size: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .containerError__description {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 426px) {
+  .containerError__description {
+    font-size: 15px;
+    margin-top: 10px;
+  }
 }
 .containerError__home {
   margin: 80px;
   font-weight: 500;
   font-size: 18px;
   color: black;
+}
+@media (max-width: 600px) {
+  .containerError__home {
+    margin: 56px 0;
+  }
+}
+@media (max-width: 426px) {
+  .containerError__home {
+    font-size: 14px;
+    margin: 30px 0;
+  }
 }
 
 /*# sourceMappingURL=errorMessage.css.map */

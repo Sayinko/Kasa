@@ -15,14 +15,18 @@
 }
 @media (max-width: 768px) {
   .gallery {
-    padding: 30px;
-    grid-template-columns: 1fr;
+    padding: 0px;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    gap: 25px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .gallery {
+    grid-template-columns: 1fr;
     padding: 0px;
     background-color: white;
+    gap: 25px;
   }
 }
 .gallery__item {
@@ -35,7 +39,7 @@
     height: 265px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .gallery__item {
     height: 252px;
   }

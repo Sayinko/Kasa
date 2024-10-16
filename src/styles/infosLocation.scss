@@ -32,6 +32,10 @@ $star-inactive: #E3E3E3;
                 font-weight: 500;
                 color: $main-color;
 
+                @media (max-width: 700px) {
+                    font-size: 24px;
+                }
+
                 @media (max-width: 500px) {
                     font-size: 18px;
                 }
@@ -41,6 +45,10 @@ $star-inactive: #E3E3E3;
                 font-weight: 500;
                 font-size: 18px;
                 margin: 10px 0;
+
+                @media (max-width: 700px) {
+                    font-size: 16px;
+                }
 
                 @media (max-width: 500px) {
                     font-size: 14px;
@@ -67,6 +75,10 @@ $star-inactive: #E3E3E3;
             gap: 15px;
             height: 50%;
 
+            @media (max-width: 700px) {
+                font-size: 14px;
+            }
+
             @media (max-width: 500px) {
                 font-size: 12px;
                 display: flex;
@@ -77,6 +89,11 @@ $star-inactive: #E3E3E3;
                 border-radius: 64px;
                 width: 64px;
                 height: 64px;
+
+                @media (max-width: 700px) {
+                    height: 50px;
+                    width: 50px;
+                }
 
                 @media (max-width: 500px) {
                     width: 32px;
@@ -98,6 +115,11 @@ $star-inactive: #E3E3E3;
             .star {
                 color: $main-color;
                 font-size: 26px;
+
+                @media (max-width: 700px) {
+                    height: 22px;
+                }
+                
                 @media (max-width: 500px) {
                     height: 18px;
                 }
@@ -106,6 +128,11 @@ $star-inactive: #E3E3E3;
             .starGrey {
                 color: $star-inactive;
                 font-size: 26px;
+
+                @media (max-width: 700px) {
+                    height: 22px;
+                }
+
                 @media (max-width: 500px) {
                     height: 18px;
                 }
@@ -127,6 +154,9 @@ $star-inactive: #E3E3E3;
 
             @media (max-width: 700px) {
                 padding: 5px 20px;
+                font-size: 13px;
+                display: flex;
+                align-items: center;
             }
 
             @media (max-width: 500px) {

@@ -16,13 +16,17 @@ $font: 'Montserrat', sans-serif;
     }
 
     @media (max-width: 768px) {
-        padding: 30px;
-        grid-template-columns: 1fr;
+        padding: 0px;
+        grid-template-columns: 1fr 1fr;
+        background-color: white;
+        gap: 25px;
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
         padding: 0px;
         background-color: white;
+        gap: 25px;
     }
 
     &__item {
@@ -34,7 +38,7 @@ $font: 'Montserrat', sans-serif;
             height: 265px;
         }
 
-        @media (max-width: 425px) {
+        @media (max-width: 500px) {
             height: 252px;
         }
 

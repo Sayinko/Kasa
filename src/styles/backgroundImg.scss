@@ -7,10 +7,10 @@
         filter: brightness(0.50);
 
         @media (max-width: 594px) {
-            height: 135px;
+            height: 160px;
         }
 
-        @media (max-width: 425px) {
+        @media (max-width: 500px) {
             height: 111px;
             border-radius: 10px;
         }
