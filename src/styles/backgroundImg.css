@@ -6,15 +6,15 @@
   border: 1px solid black;
   filter: brightness(0.5);
 }
-@media (max-width: 752px) {
+@media (max-width: 594px) {
   .img-background {
-    height: 190px;
+    height: 135px;
   }
 }
-@media (max-width: 547px) {
+@media (max-width: 425px) {
   .img-background {
-    border-radius: 10px;
     height: 111px;
+    border-radius: 10px;
   }
 }
 

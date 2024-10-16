@@ -5,6 +5,14 @@
 
 header {
     margin: 0px 0px 50px 0px;
+
+    @media (max-width: 768px) {
+        margin: 0px 0px 40px 0px
+    }
+
+    @media (max-width: 425px) {
+        margin: 0px 0px 25px 0px;
+    }
 }
 
 .navbar {
@@ -14,23 +22,23 @@ header {
     align-items: center;
 
         @media (max-width: 752px) {
-            padding: 20px 50px;
+
         }
 
-        @media (max-width: 547px) {
-            padding: 20px 15px;
+        @media (max-width: 594px) {
+
         }
 
     &__img {
-        @media (max-width: 752px) {
-            height: 51px;}
+        @media (max-width: 768px) {
+  }
         
 
-        @media (max-width: 547px) {
+        @media (max-width: 594px) {
             height: 46px;
     }
-        @media (max-width: 373px) {
-            height: 32px;
+        @media (max-width: 425px) {
+            height: 40px;
         }}
 
     &__links {
@@ -38,8 +46,9 @@ header {
         display: flex;
         gap: 50px;
 
-        @media (max-width: 547px) {
+        @media (max-width: 594px) {
             gap: 24px;
+            margin-right: 10px;
         }
 
 
@@ -51,12 +60,12 @@ header {
             @media (max-width: 752px) {
                 font-size: 21px;}
 
-            @media (max-width: 547px) {
-                font-size: 12px;
-                text-transform: uppercase;
+            @media (max-width: 594px) {
+                font-size: 18px;
         }
-        @media (max-width: 373px) {
-            font-size: 11px;
+            @media (max-width: 425px) {
+                font-size: 11px;
+                text-transform: uppercase;
         }
     }
 }}

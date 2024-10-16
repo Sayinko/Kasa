@@ -6,12 +6,12 @@
         border: 1px solid black;
         filter: brightness(0.50);
 
-        @media (max-width: 752px) {
-            height: 190px;
-            }
+        @media (max-width: 594px) {
+            height: 135px;
+        }
 
-        @media (max-width: 547px) {
-            border-radius: 10px;
+        @media (max-width: 425px) {
             height: 111px;
+            border-radius: 10px;
         }
 }

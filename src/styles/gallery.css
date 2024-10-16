@@ -7,10 +7,38 @@
   border-radius: 30px;
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .gallery {
+    padding: 30px;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 425px) {
+  .gallery {
+    padding: 0px;
+    background-color: white;
+  }
+}
 .gallery__item {
   position: relative;
   width: 100%;
   height: 340px;
+}
+@media (max-width: 1024px) {
+  .gallery__item {
+    height: 265px;
+  }
+}
+@media (max-width: 425px) {
+  .gallery__item {
+    height: 252px;
+  }
 }
 .gallery__item--img {
   object-fit: cover;

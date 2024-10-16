@@ -25,11 +25,11 @@ function Collapse({description, title, className, aboutContent}) {
                 <div className="containerCollapse__topbar" >
                     <p>{title}</p>
                     <button onClick={handleClickDescription}>
-                        <img src={arrowBack} className={visibleDescription ? "rotate" : ""} alt="flèche de retour"/>
+                        <img src={arrowBack} className={visibleDescription ? "rotate" : "rotateInverse"} alt="flèche de retour"/>
                     </button>
                 </div>
                 <div ref={collapseRef} className={`toggleDescription ${aboutContent} ${visibleDescription ? 'visible' : 'hidden'}` } style={{maxHeight: visibleDescription ? height : "0px", overflow:"hidden", transition: "max-height 0.5s ease-in-out, opacity 0.5s ease-in-out"}}>
-                    <p>{description}</p>
+                    {description}
                 </div>
             </div>
 

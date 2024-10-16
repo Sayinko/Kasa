@@ -5,6 +5,11 @@ li {
 .containerCollapse {
   width: 45%;
 }
+@media (max-width: 700px) {
+  .containerCollapse {
+    width: 100%;
+  }
+}
 .containerCollapse__topbar {
   display: flex;
   justify-content: space-between;
@@ -15,6 +20,11 @@ li {
   font-weight: 700;
   font-size: 18px;
   padding: 0 20px;
+}
+@media (max-width: 500px) {
+  .containerCollapse__topbar {
+    font-size: 13px;
+  }
 }
 .containerCollapse__topbar button {
   background: none;
@@ -27,9 +37,19 @@ li {
 .containerCollapse__topbar p {
   color: white;
 }
+@media (max-width: 500px) {
+  .containerCollapse__topbar p {
+    margin: 10px 0px;
+  }
+}
 
 .rotate {
   transform: rotate(-180deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotateInverse {
+  transform: rotate(0deg);
   transition: transform 0.5s ease-in-out;
 }
 
@@ -37,11 +57,11 @@ li {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.5s ease-in-out;
 }
 .toggleDescription p {
   transform: translateY(-50px);
   opacity: 0;
-  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .toggleDescription.visible {
@@ -49,9 +69,15 @@ li {
   background-color: #F6F6F6;
   position: relative;
   bottom: 8px;
+  padding: 25px;
   z-index: -1;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
+}
+@media (max-width: 500px) {
+  .toggleDescription.visible {
+    padding: 20px;
+  }
 }
 .toggleDescription.visible p {
   padding: 0;
@@ -62,27 +88,30 @@ li {
   transform: translateY(0);
   transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
 }
+@media (max-width: 700px) {
+  .toggleDescription.visible p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .toggleDescription.visible p {
+    font-size: 12px;
+  }
+}
 .toggleDescription.visible ul {
-  padding: 16px 21px;
   font-size: 18px;
-}
-
-.toggleEquipment.visible {
-  max-height: 200px;
-  opacity: 1;
-  padding: 16px 21px;
-  font-size: 18px;
-  font-weight: 400;
-  background-color: #F6F6F6;
-  position: relative;
-  bottom: 8px;
-  z-index: -1;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-.toggleEquipment.visible ul {
   padding: 0;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .toggleDescription.visible ul {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .toggleDescription.visible ul {
+    font-size: 12px;
+  }
 }
 
 .toggleDescription.hidden {
@@ -94,6 +123,14 @@ li {
   padding: 26px;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 500px) {
+  .toggleDescription.aboutContent.visible {
+    font-size: 12px;
+    padding: 20px;
+  }
 }
 
 .toggleDescription.styleAbout.hidden {
@@ -103,6 +140,16 @@ li {
 
 .containerCollapse.styleAbout {
   width: 70%;
+}
+@media (max-width: 1024px) {
+  .containerCollapse.styleAbout {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .containerCollapse.styleAbout {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=details.css.map */

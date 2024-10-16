@@ -22,17 +22,17 @@ function InfosLocation({title, location, nameHost, pictureHost, tags, rating}) {
                 <div className="containerLocation__infos--title">
                     <h1>{title}</h1>
                     <p>{location}</p>
-                </div>
-                <div className="containerLocation__infos--name">
-                    <p>{nameHost}</p>
-                    <img src={pictureHost} alt="L'hôte"/>
+                    <div className="tags">
+                        {tags.map((tag) => (
+                            <p key={tag}>{tag}</p>
+                        ))}
+                    </div>
                 </div>
             </div>
             <div className="containerLocation__description">
-                <div className="containerLocation__description--filters">
-                    {tags.map((tag) => (
-                        <p key={tag}>{tag}</p>
-                    ))}
+            <div className="containerLocation__description--name">
+                    <p>{nameHost}</p>
+                    <img src={pictureHost} alt="L'hôte"/>
                 </div>
                 <div className="containerLocation__description--stars">
                     {stars}
