@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from "./components/pages/App.jsx";
-import About from "./components/pages/About.jsx";
-import Location from "./components/pages/Location.jsx";
-import ErrorPages from "./components/pages/ErrorPages.jsx";
+import App from "./pages/App.jsx";
+import About from "./pages/About.jsx";
+import Location from "./pages/Location.jsx";
+import ErrorPages from "./pages/ErrorPages.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
